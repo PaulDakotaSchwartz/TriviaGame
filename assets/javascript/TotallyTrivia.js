@@ -36,8 +36,10 @@ function runTriviaGame() {
 			for (var i=0; i<triviaAnswers.Answers2.length; i++){
 			
 			var a = $("<input type='radio' name='answer2'>" + triviaAnswers.Answers2[i] + "<br>");
+        	var b = i + 4;
         	 a.addClass("answer");
-        	 a.attr("id", triviaAnswers.Answers2[i]);
+        	 a.attr("id", b);
+        	 a.attr("value",b);
         	 a.attr("data-name", triviaAnswers.Answers2[i]);
         	 a.text(triviaAnswers.Answers2[i]);
         	 $("#console").append(a);
@@ -53,20 +55,52 @@ function runTriviaGame() {
 
 	function scoreGame(){
 		// console.log(correct);
-		var check1 = $(".answer1").val();
-		console.log(check1);
-		if (check1==2){
+		var check1 = document.getElementById("0").checked;
+		var check2 = document.getElementById("1").checked;
+		var check3 = document.getElementById("2").checked;
+		var check4 = document.getElementById("3").checked;
+		console.log(check2);
+		if (check3==true){
 			correct++;
 			console.log(correct);
+		}
+		else if (check1 == false && check2 == false && check3 == false && check4 == false){
+			unanswered++;
+			console.log(unanswered);
 		}
 		else {
 			incorrect++;
 			console.log(incorrect);
 		}
+		var check5 = document.getElementById("4").checked;
+		var check6 = document.getElementById("5").checked;
+		var check7 = document.getElementById("6").checked;
+		var check8 = document.getElementById("7").checked;
+		console.log(check2);
+		if (check6==true){
+			correct++;
+			console.log(correct);
+		}
+		else if (check5 == false && check6 == false && check7 == false && check8 == false){
+			unanswered++;
+			console.log(unanswered);
+		}
+		else {
+			incorrect++;
+			console.log(incorrect);
+		}
+
+	$("#console").empty();
+	$("#console").append("<h1>Number Correct:</h1>" + correct);
+	$("#console").append("<h1>Number Incorrect:</h1>" + incorrect);
+	$("#console").append("<h1>Number Unanswered:</h1>" + unanswered);
+	$("#console").append("<button id='reset'>reset</button>");
+	document.getElementById("reset").onclick = function() {
+	// Start Timer
+	runTriviaGame()
+	};
 	}
 }
-
-
 
 document.getElementById("start").onclick = function() {
 	// Start Timer
