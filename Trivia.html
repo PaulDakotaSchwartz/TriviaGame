@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- declares the language using the lang attribute, "en-us" is for American English -->
+<html lang="en-us">
+
+<head>
+  <!-- Unicode Transformation Format (UTF), -->
+  <meta charset="UTF-8">
+  <title>Totally Trivial Trivia</title>
+
+  <!-- link to the reset.css file -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  <!-- hyperlink ref for bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- jquery library link -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- link to the javascript file executing before HTML created, returning null-->
+  <!-- <script type="text/javascript" src="assets/javascript/TotallyTrivia.js"></script> -->
+
+  <!-- link to the style.css file -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<!-- background covers the entire body of the screen -->
+<body>
+ <!-- The game display-->
+ <div class="display">
+ 	<h1 id="title">Totally Trivial Trivia</h1>
+ 	<!-- This section will need to refresh as the game progresses -->
+  	<div id="console">
+  	<button id="start">start</button>
+  	</div>
+ </div>
+</body>
+
+<!-- link to the javascript file moved to bottom due to compiling problem-->
+  <script type="text/javascript" src="assets/javascript/TotallyTrivia.js"></script>
+
+</html>

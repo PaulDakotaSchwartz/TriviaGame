@@ -1,0 +1,17 @@
+/*Add Additional Styling Here*/
+
+body {
+	background-image: url('../images/square-2696800_1280.png');
+}
+
+.display {
+	background-color: yellow;
+	height: 400px;
+	width: 400px;
+	text-align: center;
+	margin-top: 0px;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding: 0px;
+}
+
